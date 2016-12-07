@@ -1,0 +1,81 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, img, dl, dt, dd, table, th, td, blockquote, fieldset, div, strong, label, em { margin:0; padding:0; }
+ul, ol, li { list-style:none; }
+input, button { margin:0; font-size:12px; vertical-align:middle; }
+body {font-size:12px;font-family:"宋体",Arial, Helvetica, sans-serif; text-align:left; margin:0 auto; }
+
+b, em, i { font-style:normal; font-weight:normal; }
+h1, h2, h3 { font-size:14px; }
+h4 { font-weight:normal; font-size:14px; }
+h5 { font-size:12px; }
+h6 { font-size:12px; font-weight:normal; }
+a{color:#333; text-decoration:none;}
+a:hover{ text-decoration:underline;}
+.btn{ display:block; float:left;}
+.textbox03 {border: #878787 1px solid;padding: 4px 3px;font:Verdana, Geneva, sans-serif,宋体;line-height: 14px; background-color: #fff;  height: auto; font-size: 14px;  font-weight: bold; width: 190px; }
+
+.txt01{font:Verdana, Geneva, sans-serif,宋体;padding:3px 2px 2px 2px; border-width:1px; border-color:#ddd;  color:#000;}
+.txt {border: #878787 1px solid;padding: 4px 3px;font:Verdana, Geneva, sans-serif,宋体;line-height: 14px; background-color: #fff;  height: auto; font-size: 14px;}
+.footer{text-align:center;color:#15428B; margin:0px; padding:0px;line-height:23px; font-weight:bold;}
+
+.head a{color:White;text-decoration:underline;}
+
+.easyui-accordion ul{list-style-type:none;margin:0px; padding:10px;}
+.easyui-accordion ul li{ padding:0px;}
+.easyui-accordion ul li a{line-height:24px;}
+.easyui-accordion ul li div{margin:2px 0px;padding-left:10px;padding-top:2px;}
+.easyui-accordion ul li div.hover{border:1px dashed #99BBE8; background:#E0ECFF;cursor:pointer;}
+.easyui-accordion ul li div.hover a{color:#416AA3;}
+.easyui-accordion ul li div.selected{border:1px solid #99BBE8; background:#E0ECFF;cursor:default;}
+.easyui-accordion ul li div.selected a{color:#416AA3; font-weight:bold;}
+
+
+
+.icon{padding:2px 9px; background:url(../images/tabicons.png) no-repeat; display:block; float:left; height:18px; margin:2px 2px 0 0;}
+.icon-sys{ background:url(../images/directory.png) no-repeat;}
+.icon-add{background-position: -19px 0px;}
+.icon-nav{background-position: -95px -18px;}
+.icon-users{background-position: -100px -480px;}
+.icon-role{background-position: -360px -200px;}
+.icon-set{background-position: -380px -200px;}
+.icon-log{background-position: -380px -80px;}
+
+/*登录CSS*/
+.bodylog{ background:url(../images/bg01.gif) repeat-x left top #00c2f2;}
+.mainlog{ background:url(../images/01.jpg) no-repeat; width:529px; height:496px; margin:0 auto; position:relative;}
+.logbg{ font-family:"宋体"; padding:58px 0 0 50px; background:url(../images/02.gif) no-repeat; width:278px; height:130px; position:absolute; top:228px; left:80px; text-align:left;}
+
+.tab01-log{width:100%; float:left;}
+.tab01-log .t1{ width:52px; text-align:right;}
+.tab01-log td{ padding-bottom:10px;}
+.tab01-log .text{ width:160px; height:18px; line-height:18px; border:1px solid #ccc;}
+.logbtn{ background:url(../images/05.gif) no-repeat; color:#fff; margin-right:10px; width:58px; height:20px; text-align:center; line-height:20px;}
+
+/*col01-manager*/
+.col01-manager{ padding:1%; float:left; width:98%;}
+.box01-jixin{width:100%; float:left; margin-bottom:7px;}
+/*page*/
+.page{ float:right; padding-bottom:10px;}
+.page a{ display:block; float:left; height:22px; border:1px solid #d6d6d6; line-height:22px; text-align:center; float:left; display:inline; margin-left:4px; padding:0 10px;}
+.page a.active{ color:#f4420b; background:#fffbee;}
+.page a.pre{ padding-left:14px; background:url(../images/arrow01.gif) no-repeat 5px 7px;*background:url(../images/arrow01.gif) no-repeat 5px 5px;}
+.page a.next{ padding-right:14px; background:url(../images/arrow02.gif) no-repeat 50px 7px;*background:url(../images/arrow02.gif) no-repeat 50px 5px;}
+/*btnlist*/
+.btnlist{ float:left; padding-top:8px;}
+.btnlist a{ float:left; margin-right:18px;}
+.btnlist em{ display:block; background:url(../images/tools-sprites-trans.gif) no-repeat; margin-top:4px; width:7px; height:8px; float:left;}
+.btnlist b{ float:left; padding-left:3px;}
+.addjx em{ background-position:-4px -244px;}
+.deljx em{background-position:-4px -259px;}
+
+/*tab01-jixin*/
+.tab01-jixin{width:100%; float:left;}
+.tab01-jixin th{ font-weight:normal; color:#71a0dd;}
+.tab01-jixin th,.tab01-jixin td{ padding:5px 0; text-align:center; border:1px solid #e0ecff;}
+.tab01-jixin .edit{ color:#71a0dd; margin:0 10px;}
+.tab01-jixin .del{color:#f00;}
+
+
+.tab01-edit .datebox{ float:left}
+.tab01-edit .easyui-combobox{ float:left}

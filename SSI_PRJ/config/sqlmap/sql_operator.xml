@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap>
+	<typeAlias alias="dto" type="org.jw.cn.base.dto.impl.BaseDto"/>
+	<typeAlias alias="operatorBo" type="com.asj.zj.bo.sys.OperatorBo"/>
+	<select id="login" parameterClass="dto" resultClass="operatorBo">
+	    select  OP_ID       ,
+			  OP_NAME     ,
+			  LOGIN_NAME  ,
+			  REG_TYPE    ,
+			  REG_NBR     ,
+			  PHONE       ,
+			  ADDRESS     ,
+			  POST_CODE   ,
+			  TYPE        ,
+			  OP_PASSWD   ,
+			  OP_STATUS   ,
+			  LOCK_STS    ,
+			  CREATE_DATE ,
+			  VALID_DATE  ,
+			  EXPIRE_DATE ,
+			  ORG_ID      ,
+			  SECURITY_ID ,
+			  REGION_CODE ,
+			  COUNTY_CODE ,
+			  MEMO        ,
+			  PIC_PATH   
+			  from sys_operators t
+			 where t.OP_STATUS=0
+			 and t.LOCK_STS=0
+    and (t.login_name = #login_name#)
+	</select>
+
+
+</sqlMap>

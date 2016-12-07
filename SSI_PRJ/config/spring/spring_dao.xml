@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <!-- 配置数据读取器  -->
+	<bean id="BaseReader" class="org.jw.cn.base.dao.impl.IReaderImpl">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	
+	<!-- 配置Dao  -->
+	<bean id="BaseDao" class="org.jw.cn.base.dao.impl.IBaseDaoImpl">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+</beans>

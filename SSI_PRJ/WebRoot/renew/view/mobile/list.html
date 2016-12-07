@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <meta name="Keywords" content="">
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>手机回收</title>
+    <link href="../../js/bootstrap/4.0.0-alpha.5/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="../../css/mb_style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+    <style>
+        li{
+            border-bottom: 1px solid #bfbfbf;
+        }
+        .panel-title{
+            height: 44px;
+            background-color: #f8f8f8;
+        }
+        .search{
+            width: 100%;
+            height: 30px;
+            border: none;
+            margin: 8px auto;
+            display: inline-block;
+        }
+        .search input{
+            font-size: 14px;
+            height: 30px;
+            outline: none;
+            border: 0 solid #fff;
+            border-radius: 2px;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            width: 87%;
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+        .panel-body{
+            width: 100%;
+            float: left;
+            min-height: 1px;
+        }
+        .left{
+           float: left;
+           width: 28%;
+        }
+        .mobiles li{
+            color: #393939;
+            line-height: 50px;
+            background-color: #e1e6ea;
+        }
+        .cur{
+            border-left: 4px solid #0385cf;
+            background-color: #fff !important;
+        }
+        .right{
+            float: right;
+            width: 72%;
+        }
+        .models{
+            text-align: left;
+        }
+        .num{
+            float: left;
+            background-color: #a5a5a5;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            margin: 10px 10px 10px 20px;
+        }
+        .num span{
+            height: 25px;
+            line-height: 25px;
+            display: block;
+            color: #fff;
+            text-align: center;
+        }
+        .first{
+            background-color: #f40202;
+        }
+        .second{
+            background-color: #f49302;
+        }
+        .third{
+            background-color: #4bd378;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('.item').off().on('click',function () {
+                var $this = $(this);
+                $this.addClass('cur');
+                $this.siblings().removeClass('cur');
+//                $.getJSON('../../phones.txt',{},function (data) {
+//                    var info = data.refinfo;
+//                    var html = '';
+//                    for(var i in info){
+//                        switch(info[i].id){
+//                            case '1':
+//                                html += '<li> <div class="num first"><span>'+info[i].id+'</span> </div> <span>'+info[i].name+'</span></li>';
+//                                break
+//                            case '2':
+//                                html += '<li> <div class="num second"><span>'+info[i].id+'</span> </div> <span>'+info[i].name+'</span></li>'
+//                                break
+//                            case '3':
+//                                html += '<li> <div class="num third"><span>'+info[i].id+'</span> </div> <span>'+info[i].name+'</span></li>'
+//                                break
+//                            default:
+//                                html += '<li> <div class="num"><span>'+info[i].id+'</span> </div> <span>'+info[i].name+'</span></li>'
+//                                break
+//                        }
+//                    }
+//                    $('.models').html(html);
+//                });
+            });
+            $(".models li").off().on('click',function () {
+                window.location.href='details.html';
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container_list">
+    <div class="panel-title">
+        <div class="search">
+            <input type="text" placeholder="搜索你要回收的型号">
+            <div id="search" style="float: right;line-height:30px;margin: 0 5px">
+                <img src="../../images/ss.png" style="width: 20px;height: 20px;vertical-align: middle;cursor:pointer;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="left">
+            <ul class="mobiles">
+                <li class="item">环保机</li>
+                <li class="item cur">苹果</li>
+                <li class="item">三星</li>
+                <li class="item">华为</li>
+                <li class="item">小米</li>
+                <li class="item">oppo</li>
+                <li class="item">TCL</li>
+                <li class="item">三星</li>
+                <li class="item">乐视</li>
+                <li class="item">金立</li>
+                <li class="item">锤子</li>
+                <li class="item">联想</li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul class="models">
+                <li>
+                    <div class="num first">
+                        <span>1</span>
+                    </div>
+                    <span>iPhone7 plus</span>
+                </li>
+                <li>
+                    <div class="num second">
+                        <span>2</span>
+                    </div>
+                    <span>iPhone7</span>
+                </li>
+                <li>
+                    <div class="num third">
+                        <span>3</span>
+                    </div>
+                    <span>iPhone6s plus</span>
+                </li>
+                <li>
+                    <div class="num">
+                        <span>4</span>
+                    </div>
+                    <span>iPhone6s</span>
+                </li>
+                <li>
+                    <div class="num">
+                        <span>5</span>
+                    </div>
+                    <span>iPhone6 plus</span>
+                </li>
+                <li>
+                    <div class="num">
+                        <span>6</span>
+                    </div>
+                    <span>iPhone6</span>
+                </li>
+                <li>
+                    <div class="num">
+                        <span>7</span>
+                    </div>
+                    <span>iPhone6s</span>
+                </li>
+                <li>
+                    <div class="num">
+                        <span>8</span>
+                    </div>
+                    <span>iPhone6 plus</span>
+                </li>
+                <li>
+                    <div class="num">
+                        <span>9</span>
+                    </div>
+                    <span>iPhone6</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

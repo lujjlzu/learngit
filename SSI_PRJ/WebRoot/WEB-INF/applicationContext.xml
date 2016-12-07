@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <!-- 导入公用类对象 -->
+    <import resource="classes/spring/spring_ds.xml"/>
+    <import resource="classes/spring/spring_dao.xml"/>
+    <import resource="classes/spring/spring_interceptor.xml"/>
+    <import resource="classes/spring/spring_service.xml"/>
+    <import resource="classes/spring/spring_action.xml"/>
+
+    <!-- spring工具 -->
+	<bean id="spring" class="org.jw.cn.base.util.SpringBeanLoader"/>
+</beans>

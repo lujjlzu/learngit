@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>test.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+
+<script type='text/javascript' src='/test/dwr/interface/JSBaseCall.js'></script>
+<script type='text/javascript' src='/test/dwr/engine.js'></script>
+<script type='text/javascript' src='/test/dwr/util.js'></script>
+  </head>
+  <script type="text/javascript">
+  
+//定义
+  function loadData(){
+    var key_service=document.getElementById("serviceName").value;
+    var key_method=document.getElementById("methodName").value;
+    var param={};
+    param.KEY_JSCALL_SERVICE=key_service;
+    param.SERVICE_METHOD=key_method;
+    //alert(1);
+    if (key_method=='getBrandDef'){
+        param.sts=1;
+    }else if (key_method=='getPhoneTypeDef'){
+        param.brand_id=1;
+        param.sts=1;
+    }else if (key_method=='getParamAttrByPhoneType'){
+        param.phone_type_id=2;
+        param.sts=1;
+    }
+    JSBaseCall.execute(param,showResult);
+}
+function showResult(data){
+   var strJson=data["defaultJsonString"];
+   var result=eval('(' + strJson + ')');
+	
+	if (result.KEY_JSCALL_RESULT ){
+		if (result.KEY_SERVICE_RES){//成功
+	       document.getElementById("result").value=strJson;
+			
+		}else{
+		    alert('数据加载失败，失败信息'+obj.KEY_SERVICE_RES_INFO);
+		}
+	}else{
+	    alert('数据加载失败，失败信息'+obj.KEY_SERVICE_RES_INFO);
+	}		
+}
+function getParam(){
+//var paramtext=document.getElementById("param").value;
+    //alert(paramtext);
+    //var paramList=paramtext.split(";");
+   // for(var i=0;i<paramList.length-1;i++){
+   //    var oneParamText=paramList[i] ;
+    //   var oneParam=oneParamText.split("=");
+    //   alert(oneParam[0]);
+    //   alert(oneParam[1]);
+       //param[+evaloneParam[0]+]+=oneParam[1];
+
+    //}
+    
+   // var param2=eval('('+paramtext+ ')');
+   //var result=eval('(' + paramtext + ')');
+    
+   // alert(param2);
+}
+  </script>
+  <body>
+  <br/>
+ 服务：<input type="text" id="serviceName" value="estimateService"> <br><br>
+ 方法：<input type="text" id="methodName" value="getBrandDef"> <br><br>
+ 参数：<textarea id="param" rows="8" cols="100"></textarea> <br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" name="test"  value="测试" onclick="loadData()"> <br><br>
+结果：<textarea id="result" rows="12" cols="100"></textarea>
+  </body>
+</html>

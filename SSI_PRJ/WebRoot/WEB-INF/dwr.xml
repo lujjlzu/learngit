@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN" "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+<dwr>
+	<init>
+		<!-- <creator id="BssCreator" class="com.nl.base.dwr.interfaces.impls.JSCallCreator" />  -->
+		<creator id="BssCreator" class="org.directwebremoting.create.NewCreator"/>
+	</init>
+	<allow>
+		<create creator="BssCreator" javascript="JSBaseCall" scope="application">
+			<param name="class" value="org.jw.cn.base.jscall.BaseJSCallImpl"/>
+		</create>	  
+		<convert converter="bean" match="org.hd.demo.bo.*"/>
+	</allow>
+</dwr>

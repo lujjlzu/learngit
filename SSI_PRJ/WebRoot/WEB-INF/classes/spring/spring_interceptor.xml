@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--对服务层配置拦截器-->
+	<bean name="beanNameAutoProxy" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator" />
+	<bean id="transactionProxy" parent="beanNameAutoProxy">
+      <property name="beanNames">
+       <list>
+        <value>*Service</value>
+       </list>
+      </property>
+      <property name="interceptorNames">
+       <value>transactionInterceptor</value>
+      </property>
+     </bean>
+	
+	<bean id="transactionManager"
+      class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+      <property name="dataSource">
+       <ref bean="dataSource" />
+      </property>
+    </bean>
+
+	<bean id="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+	   <property name="transactionManager">
+	       <ref local="transactionManager" />
+	   </property>
+	   <property name="transactionAttributes">
+	       <props>
+	            <prop key="get*">PROPAGATION_SUPPORTS</prop><!-- 此类方法无需事务支持，如有事务按原先事务运行 -->
+				<prop key="save*">PROPAGATION_REQUIRED,-Exception</prop><!--对此类方法新建事务，如有事务按原先事务运行 -->
+				<prop key="update*">PROPAGATION_REQUIRED,-Exception</prop><!--对此类方法新建事务，如有事务按原先事务运行 -->
+				<prop key="del*">PROPAGATION_REQUIRED,-Exception</prop><!--对此类方法新建事务，如有事务按原先事务运行 -->
+				<prop key="callTrans*">PROPAGATION_REQUIRES_NEW,-Exception</prop><!--此类新建事务 -->	
+				<prop key="jsCall">PROPAGATION_REQUIRED,-Exception</prop><!--此类新建事务 -->	
+	       </props>
+	   </property>
+	</bean>
+
+</beans>

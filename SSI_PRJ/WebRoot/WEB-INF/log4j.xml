@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="WEBRollingFile"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="d:/web.log" />
+		<param name="append" value="false" />
+		<param name="MaxFileSize" value="1000000KB" />
+		<param name="MaxBackupIndex" value="10" />
+		<param name="ImmediateFlush" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %C:%L - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WEBAppRollingFile"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="d:/web-app.log" />
+		<param name="append" value="false" />
+		<param name="MaxFileSize" value="1000000KB" />
+		<param name="MaxBackupIndex" value="10" />
+		<param name="ImmediateFlush" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %C:%L - %m%n" />
+		</layout>
+	</appender>
+	
+    <appender name="ConsoleLog"
+		class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%-5p  %d %-15c{1} [%x]: %m%n" />
+		</layout>
+	</appender>
+	
+    <!-- WEB应用WEB层日志器 -->
+	<logger name="WEB_APP_LOG" additivity="true">
+		<level value="debug" />
+		<appender-ref ref="WEBAppRollingFile" />
+	</logger>
+	<!-- WEB应用应用层层日志器 -->
+	<logger name="APP-LOG" additivity="true">
+		<level value="debug" />
+		<appender-ref ref="WEBAppRollingFile" />
+	</logger>
+
+	<root>
+	    <priority value="debug" />
+	    <appender-ref ref="ConsoleLog" />
+		<appender-ref ref="WEBAPPRollingFile" />
+	</root>
+	
+</log4j:configuration>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的订单</title>
+    <link href="../../js/bootstrap/4.0.0-alpha.5/css/bootstrap-grid.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/order.js"></script>
+    <style>
+        .phone_preview{
+            width: 90%;
+            background-color: #eee;
+            height: 260px;
+            margin: 40px auto;
+        }
+        .img_box{
+            float: left;
+            width: 160px;
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            height: 160px;
+            margin: 50px 40px;
+            text-align: center;
+        }
+        .img_box img{
+            position: relative;
+            top: 18px;
+        }
+        .content_box{
+            margin-left: 240px;
+            padding: 40px;
+            line-height: 2;
+        }
+        .pay{
+            width: 90%;
+            margin: 0 auto;
+        }
+        .tab{
+            width: 90%;
+            margin: 10px auto;
+        }
+        .way{
+            float: left;
+            width: 24%;
+            margin: 0 1% 1% 0;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 45px;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .selected{
+            line-height: normal;
+            border: 13px solid #ebf6fc;
+            border-image: url(../../images/yellow.png) 13 13 round;
+            -moz-border-image:url(../../images/yellow.png) 13 13 round;
+            -webkit-border-image:url(../../images/yellow.png) 13 13 round;
+            -o-border-image:url(../../images/yellow.png) 13 13 round;
+        }
+        .step{
+            clear: both;
+            color: #7B7B7B;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .item{
+            float: left;
+            width: 24%;
+            margin:20px 0;
+            overflow: hidden;
+        }
+        .num{
+            float: left;
+            background-color: #7B7B7B;
+            width: 25px;
+            height: 25px;
+            border-radius: 25px;
+            margin-right: 5px;
+        }
+        .num span{
+            height: 25px;
+            line-height: 25px;
+            display: block;
+            color: #fff;
+            text-align: center;
+        }
+        .message{
+            clear: both;
+            width: 90%;
+            margin: 20px auto;
+        }
+        .col-6{
+            width: 49%;
+        }
+        .way input{
+            font-size: 16px;
+            height: 45px;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            width: 93%;
+            margin-left: 10px;
+        }
+        .panel-bottom{
+            width: 90%;
+            margin: 50px auto;
+        }
+        .btn{
+            width: 24%;
+            margin: 0 auto;
+            background-color: #0385d0;
+            color: #fff;
+            border:1px solid #ddd;
+            height: 43px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 43px;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="panel-title">
+        <img src="../../images/logo.png" style="vertical-align:middle">
+        <span>移&nbsp;动&nbsp;零&nbsp;售&nbsp;业&nbsp;务&nbsp;处&nbsp;理&nbsp;平&nbsp;台</span>
+    </div>
+    <div class="panel-banner">
+        <div class="banner">
+            <span>
+                <a href="#">首页</a>>
+                <a href="list.html">旧手机回收</a> >
+                <a href="details.html">手机</a> >
+                <a href="ready.html">iPhone 6S</a> >
+                订单
+            </span>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="phone_preview">
+            <div class="img_box">
+                <img src="../../images/iPhone.png">
+            </div>
+            <div class="content_box">
+                <p>型号：苹果iPhone 6S</p>
+                <p>估价详情：大陆国|保修一个月以上大陆国|保修一个月以上大陆国|128G|白|无维修历史</p>
+                <p>回收价：<span class="price">￥ 3200.00</span></p>
+            </div>
+        </div>
+        <div class="pay">
+            <p style="font-size: 18px">支付方式：</p>
+            <div class="tab">
+                <div class="way selected">现金交易</div>
+                <div class="way">新机换购</div>
+                <div class="way">充话费流量</div>
+                <div class="way">更多</div>
+            </div>
+        </div>
+        <div class="step">
+            <div class="item">
+                <div class="num">
+                    <span>1</span>
+                </div>
+                提交订单&nbsp;&nbsp;
+            </div>
+            <div class="item">
+                <div class="num">
+                    <span>2</span>
+                </div>
+                客服核对订单&nbsp;&nbsp;
+            </div>
+            <div class="item">
+                <div class="num">
+                    <span>3</span>
+                </div>
+                快递机器&nbsp;&nbsp;
+            </div>
+            <div class="item">
+                <div class="num">
+                    <span>4</span>
+                </div>
+                质检验收
+            </div>
+        </div>
+        <div class="message">
+            <p style="font-size: 18px">联系方式：</p>
+            <div class="tab">
+                <div class="way col-6">
+                    <input type="text" placeholder="请输入联系人">
+                </div>
+                <div class="way col-6">
+                    <input type="text" placeholder="请输入手机号">
+                </div>
+                <div class="way col-6">
+                    <input type="text" placeholder="请输入支付宝账号">
+                </div>
+                <div class="way col-6">
+                    <input type="text" placeholder="请输入支付宝真实姓名">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-bottom">
+        <div id="submit" class="btn">
+            提交订单
+        </div>
+    </div>
+</div>
+</body>
+</html>

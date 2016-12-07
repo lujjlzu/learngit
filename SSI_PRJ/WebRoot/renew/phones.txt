@@ -1,0 +1,7 @@
+﻿{
+  "refinfo": [
+              { "name":"iPhone7 plus", "id": "1"},  
+	      { "name":"iPhone7 ", "id": "2"}, 
+	      { "name":"iPhone6s plus", "id": "3"}
+	]
+}

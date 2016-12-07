@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//WebRoot/renew/js/details.js=UTF-8
+encoding//WebRoot/renew/view/pc/details.html=UTF-8
+encoding//WebRoot/renew/view/pc/list.html=UTF-8
+encoding//WebRoot/renew/view/pc/order.html=UTF-8
+encoding//WebRoot/renew/view/pc/ready.html=UTF-8
+encoding//src/com/asj/zj/common/BaseData.java=UTF-8
+encoding//src/com/asj/zj/service/estimate/impl/EstimateServiceImpl.java=GBK
+encoding//src/com/asj/zj/service/estimate/impl/OrderServiceImpl.java=GBK

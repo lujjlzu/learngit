@@ -1,0 +1,67 @@
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:"ËÎÌו",Arial, Helvetica, sans-serif; color:#333; margin:0 auto;}
+
+a{ text-decoration:none; color:#333;}
+body {
+    font-family:helvetica,tahoma,verdana,sans-serif;
+    padding:20px;
+    font-size:13px;
+    margin:0;
+}
+h2 {
+    font-size:18px;
+    color:#333;
+    font-weight:bold;
+    margin:0;
+    margin-bottom:15px;
+}
+.demo-info{
+	background:#FFFEE6;
+	color:#8F5700;
+	padding:12px;
+}
+.demo-tip{
+	width:24px;
+	height:16px;
+	float:left;
+}
+
+.datagrid-header-inner{ width:100%; padding-right:0; text-align:center;}
+.datagrid-cell{ text-align:center;}
+
+.datagrid-header-inner td{ text-align:center;}
+.datagrid-body td{ padding:5px 0;}
+
+
+.panel-tool-close{ display:block; width:16px; height:16px;}
+.easyui-layout td{ padding-bottom:6px; }
+
+.datagrid-header td{ padding:3px 0;} 
+
+
+.tab01-edit{ width:100%; float:left;}
+.tab01-edit td{ padding-bottom:5px; padding-right:6px; text-align:right;}
+.tab01-edit select{ float:left; width:180px; height:20px;}
+.tab01-edit .text,.tab01-edit .txt01,.tab01-edit .file,.tab01-edit .textarea{ float:left; width:180px; height:18px; border:1px solid #ccc; line-height:18px;}
+.tab01-edit .textarea{ height:90px; width:420px;}
+.bsea{ float:left; padding:2px 4px 0 0;}
+
+.seabtn{ display:block; background:url(../js/themes/icons/search.png) no-repeat; padding-left:20px; text-align:left; width:40px; height:20px; line-height:20px; border:1px solid #7eabcd; float:left; margin-left:5px;}
+
+.datagrid-view1 td{ border-right:1px dotted #ccc; padding:0 6px;}
+
+/*page*/
+.page{background:#eee;position: relative; padding-top:2px; height:22px; width:1036px; border:2px solid #99BBE8;border-top:1px solid #99BBE8; float:left; margin-top:-2px;}
+.p01,.first,.pre,.count,.next,.last{ float:left; margin:5px 5px 0 7px; }
+.first,.pre,count,.next,.last{display:block; cursor:pointer; width:17px; border:1px solid #efefef; padding:3px 4px 3px 5px; height:16px; margin:3px 0 0 2px;}
+.first:hover,.pre:hover,.next:hover,.last:hover{ border:1px solid #b6cdde; background:#ebeef2;}
+.first span{background:url(../js/themes/default/images/pagination_first.gif) no-repeat; text-indent:-999em; display:block; width:16px; height:16px;}
+.pre span{background:url(../js/themes/default/images/pagination_prev.gif) no-repeat; text-indent:-999em; display:block; width:16px; height:16px;}
+.count .text{ border:1px solid #ccc; height:14px; width:19px; float:left;  margin:0 2px;}
+.count em{ float:left; padding-left:1px;}
+.next span{background:url(../js/themes/default/images/pagination_next.gif) no-repeat; text-indent:-999em; display:block; width:16px; height:16px;}
+.last span{background:url(../js/themes/default/images/pagination_last.gif) no-repeat; text-indent:-999em; display:block; width:16px; height:16px;}
+.btotal{ float:right; padding-right:4px; padding-top:6px;}

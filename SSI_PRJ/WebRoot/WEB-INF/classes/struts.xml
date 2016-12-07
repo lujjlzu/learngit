@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" /><!--  指定字符集 -->
+	<constant name="struts.multipart.parser" value="jakarta" /><!--  指定文件上传插件 -->
+	<constant name="struts.multipart.maxSize" value="1073741824" /><!-- struts上传文件默认大小，这里只是设置一个最大值为1G，具体应用时单独控制 -->
+	<constant name="struts.multipart.saveDir"
+		value="javax.servlet.context.tempdir" /><!--  指定上传文件的临时保存路径 这里使用默认值 -->
+	<constant name="struts.custom.i18n.resources"
+		value="messagesResource" />
+
+	<!-- Frame -->
+	<include file="struts-base.xml" />
+	<!-- app -->
+	<include file="struts/demo.xml" />
+	<!--  package name="struts-root" extends="struts-default"
+		abstract="true">
+	</package>-->
+</struts>
