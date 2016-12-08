@@ -1,4 +1,5 @@
 现在进行git缓冲区测试学习
 Creating a new branch is quick.
 Creating a new branch is quick AND simple.
+Now we learn the branch.
 
